@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+            <div class="sidebar">
+                <div class="sidebar__brand">
+                    <h1 class="sidebar__brand__name">Billy</h1>
+                </div>
+                <div class="create__new">
+                    <button class="sidebar-btn create__new__btn" onclick="CreateNew()">Create new</button>
+                </div>
+                <div class="sidebar__serach">
+                    <!-- <div class="serach-btn"><span class="la la-search"></span></div> -->
+                    <input type="search" class="sidebar__serach__search__input" placeholder="Search here">
+                </div>
+                <div class="sidebar__menu">
+                    <nav class="sidebar__menu__lists">
+                        <ul>
+                            <li class="sidebar__menu-list">
+                                <a href="" class="sidebar__menu__links"><span class="las la-igloo sidebar__menu__text"></span>
+                                    <span>Dashboard</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a href="" class="sidebar__menu__links"><span class="las la-wallet sidebar__menu__text"></span>
+                                    <span>Sales</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a  class="sidebar__menu__links" href=""><span class="las la-clipboard-list sidebar__menu__text"></span>
+                                    <span>Expenses</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a class="sidebar__menu__links" href=""><span class="la la-bank sidebar__menu__text"></span>
+                                    <span>Bank</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a class="sidebar__menu__links" href=""><span class="la la-money-bill-wave sidebar__menu__text"></span>
+                                    <span>Tax</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a href="" class="sidebar__menu__links"><span class="la la-signal sidebar__menu__text"></span>
+                                    <span>Accounting</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a href="" class="sidebar__menu__links"><span class="las la-user-circle sidebar__menu__text"></span>
+                                    <span>Accounts</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a href="" class="sidebar__menu__links"><span class="las la-puzzle-piece sidebar__menu__text"></span>
+                                    <span>Integrations</span></a>
+                            </li>
+                            <li class="sidebar__menu-list">
+                                <a href="" class="sidebar__menu__links"><span class="las la-money-check-alt sidebar__menu__text"></span>
+                                    <span>Financing</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="your__plan">your plan: <strong> Basic</strong></p>
+                    <div class="upgrade">
+                        <button class="sidebar-btn upgrade__upgrade__plan" onclick="upgrade()">Upgrade plan</button>
+                    </div>
+                    <div class="cvs">
+                        <i class="las la-briefcase"></i>
+                        <strong class="cvs__jonathan__strong">Jonathan CVs</strong>
+                        <p class="cvs__jonathan__small">Joonathan CVs</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <i class="las la-user-alt"></i>
+                    <i class="la la-wrench"></i>
+                    <i class="la la-question-circle"></i>
+                </div>
+        </div>
+        <main class="main-content">
+            <section class="overview main-content__box">
+                <h3 class="overview__text main-content__text">Overview</h3>
+                <ul>
+                    <li class="overview__list">
+                        <span class="revenue__text">Revnue</span>
+                        <span class="percent">
+                            <div class="percent__revenue overview__percent"></div>
+                        </span>
+                    </li>
+                    <li class="overview__list">
+                        <span class="expenses__text">Expenses</span>
+                        <span class="percent">
+                            <div class="percent__expenses overview__percent"></div>
+                        </span>
+                    </li>
+                    <li class="overview__list">
+                        <span class="profit__text">Profit</span>
+                        <span class="percent">
+                            <div class="percent__profit overview__percent"></div>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+            <section class="vat main-content__box box-right">
+                <div class="vat__head">
+                    <h3 class="vat__text main-content__text">VAT</h3>
+                    <div class="vat__settle">
+                        <button class="vat__settle__btn main-content__btn">Settle VAT</button>
+                    </div>
+                </div>
+                <div class="vat__tax__agency">
+                    <span class="vat__tax__agency__text">Settled with the Danish Tax Agency</span>
+                    <span class="vat__tax__agency__date">Due date</span>
+                </div>
+                <div class="vat__krone__currency">
+                    <storng class="vat__krone__currency__bold">3,480<span class="vat__krone__currency__symbol">.20
+                            DKK</span></storng>
+                    <strong class="vat__days__number">13 <span class="vat__days__word">days</span></strong>
+                </div>
+
+                <div class="vat__vat__time">
+                    <span class="vat__vat__time__period">For period: Q4 2021</span>
+                    <span class="vat__vat__time__date">March 8, 2022</span>
+                </div>
+
+                <div class="vat__vat__footer main-content__footer">
+                    <span class="vat__vat__footer__text">
+                        (Red number = you owe tax / Green number = you will get a tax return)
+                    </span>
+                </div>
+            </section>
+            <section class="invoices main-content__box">
+                <div class="invoices__head">
+                    <h3 class="invoices__head__text main-content__text">Invoices</h3>
+                    <div class="invoices__create">
+                        <button class="invoices__create__btn main-content__btn">Create invoice</button>
+                    </div>
+                </div>
+                <div class="invoices__status">
+                    <span class="invoices-status-main"><span class="invoices__number__overdue invoices-status-number-main invoices-statur__number">2</span>
+                    <span class="invoices__status__overdue">Overdue</span></span>
+                    <span class="invoices-status-main invoices-status-main__undapid"><span class=" invoices__number__unpaid invoices-status-number-main invoices-statur__number">2</span>
+                    <span class="invoices__status__unpaid">Unpaid</span></span>
+                    <span class="invoices-status-main invoices-status-draf"><span class="invoices__number__draf invoices-statur__number invoices-status-number-main">2</span>
+                    <span class="invoices__status__draf">Draf</span></span>
+                </div>
+                <div class="invoices__Amount">
+                    <span class="invoices__Amount__overdue invoices-amount__main ">
+                        <strong class="invoices__Amount__strong">269,480<span class="invoices__Amount__overdue__currency">.20 DKK</span>
+                        </strong>
+                    </span>
+                    <span class="invoices__Amount__unpaid invoices-amount__main">
+                        <strong class="invoices__Amount__strong">116,008<span class="invoices__Amount__currency">DKK</span>
+                        </strong>
+                    </span>
+                    <span class="invoices__Amount__draf invoices-amount__main">
+                        <strong class="invoices__Amount__strong">1,700<span class="invoices__Amount__currency">Dkk</span>
+                        </strong>
+                    </span>
+                    <div class="invoices__footer main-content__footer">
+                        <span class="invoices__footer__text">
+                            Last update: a few seconds ago
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section class="bills main-content__box box-right">
+                <div class="bills__head">
+                    <h3 class="bills__head__text main-content__text">Bills</h3>
+                    <div class="bills__create">
+                        <button class="bills__create__btn main-content__btn">Create bill</button>
+                    </div>
+                </div>
+                <div class="bills__drag">
+                    <div class="bills__drag__bills">
+                        <span class="bills__drag__bills__text"><strong class="bills__drag__strongtxt">Drag and drop bills here</strong></span>
+                    </div>
+                    <div class="bills__drag__upload">
+                        <span class="bills__drag__upload__text">or click to upload</span>
+                    </div>
+                    <div class="bills__drag__openfile">
+                        <input type="file" accept=".PNG" class="bills__drag__input">
+                    </div>
+                </div>
+                <div class="bills__footer main-content__footer">
+                    <span class="bills__footer__text">
+                        You can aslo use Billy's app to take photos of your receipts. <a class="bills__footer__link"
+                            href="https://bills.parliament.uk/bills/2891">Learn more</a>.
+                    </span>
+                </div>
+            </section>
+            <section class="connect">
+                <div class="connect__head">
+                    <span class="connect__head__firstline connect__head__text">Connect</span>
+                    <span class="connect__head__secondline connect__head__text">your bank</span>
+                </div>
+                <div class="connect__body main-content__footer">
+                    <span class="connect__body__firstline connect__body__text">
+                        Automatically import bank lines into Billy to see
+                    </span>
+                    <span class="connect__body__secondline connect__body__text">
+                        your bank balance and do bank reconciliation.
+                    </span>
+                </div>
+                <div class="connect__footer main-content__footer">
+                    <button class="connect__fotter__btn main-content__btn" onclick="connectBank()">Connect my bank</button>
+                </div>
+            </section>
+            <section class="tasks main-content__box box-right">
+                <div class="tasks__head">
+                    <h3 class="tasks__head__text main-content__text">Tasks</h3>
+                    <div class="tasks__head__addnew">
+                        <button class="tasks__head__addnew__btn main-content__btn">Add new task</button>
+                    </div>
+                </div>
+                <div class="tasks__body">
+                    <div class="tasks__body__sendinvoices">
+                        <span class="tasks__body__head__checkbox">
+                            <input type="checkbox" checked name="checkbox-send" id="checkbox-send" onclick="check()">
+                            <span class="tasks__body__sendinvoices__text">Send invoices to XYZ company</span></span>
+                        <span class="checkbox-approve" id="div-approve">
+                            <i class="la la-check-circle"></i>
+                            <span class="tasks__body__approve">Approve task</span>
+                        </span>
+                    </div>
+                    <div class="tasks__body__dedline">
+                        <span class="tasks__body__deadline__text">Deadline Apr.25 2021</span>
+                    </div>
+                    <div class="tasks__body__order">
+                        <input type="checkbox">
+                        <span class="tasks__body__order__text">Order annual report</span>
+                        <span class="tasks__body__nodate">No due date</span>
+                    </div>
+                </div>
+                <div class="tasks__footer main-content__footer">
+                    <span class="tasks__footer__text">50% completed</span>
+                </div>
+            </section>
+            <section class="topcustomers main-content__smallbox">
+                <h3 class="topcustomers__text main-content__smallbox__text">Top customers for the period</h3>
+            </section>
+            <section class="topvendors main-content__smallbox box-right">
+                <h3 class="topvendors__text main-content__smallbox__text">Top vendors for the period</h3>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

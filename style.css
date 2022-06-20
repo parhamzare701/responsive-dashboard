@@ -1,0 +1,709 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    /* height: 162vh; */
+}
+.sidebar{
+
+    /* position: fixed; */
+    position: relative;
+    left:0%;
+    top: 0;
+    /* min-height: 162vh; */
+    background: #DD2F6E;
+}
+.sidebar__menu-list{
+    width: 100%;
+    padding-left: 1rem; 
+    padding-top: 0.7rem; 
+    padding-bottom: 0.7rem;
+}
+.sidebar__menu__links{
+    padding-left: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+}
+.sidebar__menu__text{
+    font-size: 1.2rem;
+    padding-right: 1rem;
+
+}
+.sidebar__menu-list{
+    cursor: pointer;
+}
+.sidebar__menu-list:hover{
+    background: #db0b57; 
+    color: #FFF;
+    border-radius: 30px 0px 0px 30px;
+}
+.sidebar__brand__name{
+    text-align: center;
+    height: 90px;
+    padding-top: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+.create__new{
+    display: flex;
+    justify-content: center;
+}
+.create__new__btn{
+    height: 50px;
+    width: 130px;
+    color: black;
+    background-color: lightpink;
+    border: none;
+    border-radius: 10%;
+    margin-bottom: 0.9rem;
+    cursor: pointer;
+}
+.sidebar__serach{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.9rem;
+}
+.sidebar__serach__search__input{
+    height: 50px;
+    width: 130px;
+    border: none;
+    border-radius: 10%;
+    text-align: center;
+}
+.your__plan{
+    margin-top: 13rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.upgrade{
+    display: flex;
+    justify-content: center;
+}
+.upgrade__upgrade__plan{
+    height: 50px;
+    width: 130px;
+    color: black;
+    background-color: lightpink;
+    border: none;
+    border-radius: 10%;
+    margin-bottom: 0.9rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+.cvs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.1rem solid rgb(102, 101, 101);
+}
+/* .cvs-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.4);
+} */
+.cvs__jonathan__strong{
+    font-weight: 600;
+    color: rgb(102, 101, 101);
+    font-size: 1rem;
+}
+.cvs__jonathan__small{
+    color: rgb(187, 187, 187);
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+.la-briefcase{
+    color: rgb(187, 187, 187);
+    display: flex;
+    align-items: center;
+    align-self: center;
+    /* padding-top: 1rem; */
+    padding-left: 0.2rem;
+    padding-top: 0.8rem;
+}
+.footer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: row;
+    color: rgb(187, 187, 187);
+    font-size: xx-large;
+}
+.la-user-alt, .la-wrench, .la-question-circle{
+    cursor: pointer;
+}
+.overview .percent{
+    margin-bottom: 9px;
+    display: flex; 
+    justify-content: center; 
+    flex-direction: row;
+    position: relative;
+    height: 6px;
+    width: 100%;
+    display: block; 
+    margin-top: 1rem;
+}
+.overview__percent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 1.09fr;
+    background: #ebeff2;
+}
+.percent__revenue{
+    width: 85%;
+    background: linear-gradient(to right, lightgreen, rgb(89, 187, 89));
+    border-radius: 1.5rem;
+}
+.percent__expenses{
+    width: 65%;
+    background: linear-gradient(to right, rgba(235, 29, 29, 0.555), rgba(235, 21, 21, 0.904));
+    border-radius: 1.5rem;
+}
+.percent__profit{
+    width: 15%;
+    background: linear-gradient(to right, lightgreen, rgb(89, 187, 89));
+    border-radius: 1.5rem;
+}
+.overview__list{
+    padding-top: 1rem;
+}
+.overview__text{
+    padding-bottom: 0.6rem;
+}
+.profit__text, .expenses__text, .revenue__text{
+    padding-left: 1.5rem;
+    color: rgb(102, 101, 101);
+}
+.percent{
+    margin-left: 1.5rem;
+}
+
+.vat__head{
+    display: flex;
+    justify-content: space-between;
+}
+.vat__text{
+    padding-bottom: 1rem; 
+    /* background-color: #DD2F6E; */
+}
+.vat__settle{
+    padding-right: 1rem;
+}
+.vat__settle__btn{
+    height: 1.8rem;
+    width: 5rem;
+}
+.vat__tax__agency{
+    color: rgb(102, 101, 101);
+    display: flex;
+    font-size: .8rem;
+    padding-top: 1.5rem;
+    justify-content: space-between;
+}
+.vat__tax__agency__text{
+    padding-left: 1.4rem;
+}
+.vat__tax__agency__date{
+    padding-right: 10rem;
+}
+.vat__krone__currency{
+    display: flex;
+    padding-top: 1.1rem;
+    justify-content: space-between;
+}
+.vat__krone__currency__bold{
+    padding-left: 1.4rem;
+    color: lightsalmon;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.vat__krone__currency__symbol{
+    font-size: .8rem;
+    color: rgb(102, 101, 101);
+}
+.vat__days__number{
+    color: rgb(44, 44, 44);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.vat__days__word{
+    font-size: .8rem;
+    color: rgb(102, 101, 101);
+    padding-right: 10rem;
+}
+
+.vat__vat__time{
+    display: flex;
+    padding-top: 0.5rem;
+    font-size: .65rem;
+    font-weight: 500;
+    color: rgb(102, 101, 101);
+    justify-content: space-between;
+}
+.vat__vat__time__period{
+    padding-left: 1.4rem;
+}
+.vat__vat__time__date{
+    padding-right: 10rem;
+}
+.vat__vat__footer{
+    color: rgb(102, 101, 101);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-left: 1.4rem;
+    padding-top: 3rem;
+}
+
+.invoices__head{
+    display: flex;
+    justify-content: space-between;
+}
+.invoices__head__text{
+    padding-bottom: 1rem; 
+    /* background-color: #DD2F6E; */
+}
+.invoices__create{
+    padding-right: 1rem;
+}
+.invoices__create__btn{
+    height: 1.8rem;
+    width: 6.5rem;
+}
+.invoices__status{
+    padding-top: 2.2rem;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+.invoices__status__overdue{
+    color: #f85242;
+    padding-left: 0.4rem;
+}
+.invoices__status__unpaid{
+    color: #deb62b;
+    padding-left: 0.4rem;
+}
+.invoices__Amount{
+    padding-top: 1rem;
+}
+.invoices__status__draf{
+    color: #3771f1;
+    padding-left: 0.4rem;
+}
+.invoices__Amount__overdue{
+    padding-left: 1.5rem;
+}
+.invoices__Amount__unpaid{
+    padding-left: 4.8rem;
+}
+.invoices__Amount__draf{
+    padding-left: 4.9rem;
+}
+.invoices__Amount__strong{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.invoices__Amount__currency{
+    padding-left: 0.22rem;
+}
+.invoices__footer{
+    color: rgb(102, 101, 101);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    padding-top: 4rem;
+}
+strong > span{
+    font-size: 0.8rem;
+    color: rgb(102, 101, 101);
+}
+.invoices__status{
+    display: flex;
+    justify-content: space-between;
+}
+.invoices-status-draf{
+    margin-right: 4.5rem;
+}
+.invoices__number__overdue{
+    border-radius: 50%;
+    border: 0.3rem solid #f5cac4;
+    color: #f85242;
+    background-color: #f5cac4;
+    margin-left: 1.5rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+.invoices__number__unpaid{
+    border-radius: 50%;
+    border: 0.3rem solid #f5f1d0;
+    color: #deb62b;
+    background-color: #f5f1d0;
+    margin-left: 6.6rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+.invoices__number__draf{
+    border-radius: 50%;
+    border: 0.3rem solid #d0e6fe;
+    color: #3771f1;
+    background-color: #d0e6fe;
+    margin-left: 5.6rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.bills__head{
+    display: flex;
+    justify-content: space-between;
+}
+.bills__head__text{
+    padding-bottom: 1rem;
+} 
+.bills__create{
+    padding-right: 1rem;
+}
+.bills__create__btn{
+    height: 1.8rem;
+    width: 4.9rem;
+}
+.bills__drag{
+    height: 9rem;
+    margin-top: 0.1rem;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    border: 0.0995rem dashed rgb(102, 101, 101);
+}
+
+.bills__drag__bills{
+    margin-top: 3rem;
+    text-align: center;
+}
+.bills__drag__upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(102, 101, 101);
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding-top: 0.5rem;
+}
+.bills__drag__openfile{
+    opacity: 0%;
+    position: relative;
+    left: 40%;
+    top: -15%;
+}
+.bills__drag__input{
+    cursor: pointer;
+    width: 9rem;
+}
+.bills__footer{
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+}
+.bills__footer__text{
+    color: rgb(102, 101, 101);
+}
+.bills__footer__link:visited{
+    color: #885fad;
+}
+.bills__footer__text:hover{
+    text-decoration: underline;
+}
+.bills__drag__strongtxt{
+    font-weight: 600;
+}
+
+
+.connect{
+    border-radius: 0.5rem; 
+    background-color: #74c5b4;
+    margin-top: 3rem;
+    height: auto;
+    margin-left: 3rem;
+}
+.connect__head{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+.connect__head__text{
+    color: #fcfdfd;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+.connect__head__firstline{
+    display: block;
+}
+.connect__body{
+    margin-top: 0.9rem;
+    margin-left: 1.5rem;
+}
+.connect__body__text{
+    color: #fcfdfd;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.connect__body__firstline{
+    display: block;
+}
+.connect__footer{
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+/* sass
+    format : scss
+*/
+.connect__footer > button{
+    padding: .4rem .7rem .4rem .7rem;
+    background-color: #2766f1;
+    border: none;
+    border-radius: 8%;
+    color: #fcfdfd;
+    text-align: center;
+    font-weight: 550;
+    cursor: pointer;
+}
+.connect__fotter__btn:hover{
+    transition: .8s ease-out;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #0134a3;
+}
+.sidebar-btn:hover{
+    transition: .8s ease-out;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgb(255, 0, 149);
+}
+.tasks__head{
+    display: flex;
+    justify-content: space-between;
+}
+.tasks__head__text{
+    padding-bottom: 1rem;
+}
+.tasks__head__addnew{
+    padding-right: 1rem;
+}
+.tasks__head__addnew__btn{
+    height: 1.8rem;
+    width: 6.5rem;
+}
+.tasks__body__sendinvoices{
+    margin-left: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.tasks__body__dedline{
+    margin-left: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.tasks__body__order{
+    padding-top: 1rem;
+    border-top:  0.099rem solid rgb(102, 101, 101);
+}
+.checkbox-approve{
+    margin-right: 1rem;
+}
+
+.tasks__body__sendinvoices__text ,  .tasks__body__deadline__text, .checkbox-approve{
+    color: rgb(102, 101, 101);
+    font-weight: 510;
+    font-size: .9rem;
+}
+.tasks__body__deadline__text, .tasks__body__sendinvoices__text{
+    text-decoration: line-through;
+    font-weight: 510;
+}
+.tasks__body__order{
+    margin-left: 1.5rem;
+}
+.tasks__body__nodate{
+    display: block;
+    margin-left: 1.2rem;
+}
+.tasks__body__nodate ,.tasks__body__order__text{
+    color: rgb(102, 101, 101);
+    font-weight: 510;
+    font-size: .9rem;
+} 
+.tasks__footer{
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    padding-top: 3rem;
+}
+.tasks__footer__text{
+    color: rgb(102, 101, 101);
+}
+
+.main-content__smallbox__text{
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.main-content__btn{
+    background: #ffffff;
+    border: 2px solid rgb(102, 101, 101);
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 10%;
+    cursor: pointer;
+    color: rgb(70, 69, 69);
+}
+.main-content__text{
+    padding-left: 1.5rem;
+}
+.main-content__box{
+    border-radius: 0.5rem; 
+    background-color: #ffffff;
+    margin-top: 3rem;
+    margin-left: 3rem; 
+    min-height: 14rem;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.box-right{
+    margin-right: 3rem;
+}
+.main-content__smallbox{
+    border-radius: 0.5rem; 
+    background-color: #ffffff; 
+    margin-top: 3rem;
+    margin-left: 3rem;
+    height: min-content;
+}
+.main-content__footer{
+    padding-right: 1rem;
+}
+/* @media (max-width: 1000px){
+    .container{
+        grid-template-columns: repeat(1,5fr)
+    }
+    .sidebar-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar{
+        height: 165vh;
+        margin: 0;
+        padding: 0;
+    }
+} */
+@media (max-width: 700px) {
+    .vat__tax__agency{
+        flex-direction: column;
+    }
+    .vat__tax__agency__date{
+        margin-left: 1.5rem;
+    }
+}
+@media (max-width: 470px) {
+    .tasks__body__dedline{
+        margin-left: 1.5rem;
+    }
+    .invoices__create__btn {
+        height: 1.8rem;
+        width: 4.7rem;
+    }
+    .main-content__btn{
+        font-size: .6rem;
+    }
+}
+@media (max-width: 600px) {
+    .sidebar{
+        opacity: 0;
+    }
+    .vat__krone__currency{
+        flex-direction: column;
+    }
+    .vat__days__number{
+        margin-left: 1.5rem;
+    }
+    .vat__vat__time__date{
+        margin-left: 1.5rem;
+        display: inline-block;
+    }
+    .vat__vat__time{
+        display: flex;
+        flex-direction: column;
+        font-size: .62rem;
+        font-weight: 700;
+    }
+    .vat__days__word {
+        padding-right: 0;
+    }
+    .vat__vat__time__date {
+        padding-right: 0;
+    }
+    .vat__tax__agency__date {
+        padding-right: 0;
+    }
+}
+@media (max-width: 1462px) {
+    .invoices__status{
+        flex-direction: column;
+    }
+    .invoices-amount__main{
+        padding-left: 1.5rem;
+        display: flex;
+        margin-bottom: 1rem;
+        flex-direction: column;
+    }
+    .invoices-status-main{
+        margin-bottom: 1rem;
+        display: block;
+    }
+    .invoices-status-number-main{
+        margin-left: 1.5rem;
+    }
+}
+@media (max-width: 1350px){
+    .invoices-status-number-main{
+        margin-left: 1.5rem;
+    }
+    .main-content__footer{
+        margin-bottom: 1.2rem;
+    } 
+    .main-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .topcustomers , .topvendors{
+        margin-right: 3rem;
+    }
+    .vat{
+        margin-right: 3rem;
+    }
+    .invoices{
+        margin-right: 3rem;
+    }
+    .overview{
+        margin-right: 3rem;
+    }
+    .connect{
+        margin-right: 3rem;
+    }
+}
